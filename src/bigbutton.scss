@@ -1,0 +1,54 @@
+.relocateArea {
+    margin: 1.7em 5.7vw;
+    @include area-relocate;
+
+    @media screen and (min-width: 800px) {
+        flex-direction: row;
+        justify-content: center;
+    }
+}
+
+.relocateArea_first {
+    @media screen and (min-width: 800px) {
+        margin: 500px 0 0 0;
+    }
+
+    @media screen and (min-width: 1000px) {
+        margin: 440px 0 0 0;
+    }
+}
+
+.relocateArea_second {
+    @media screen and (min-width: 800px) {
+        margin-top: 50px;
+        margin-bottom: 70px;
+    }
+}
+
+.bigButton_colour_red {
+    display: none;
+    @include big-button;
+    @include button-style1;
+
+    @media screen and (min-width: 800px) {
+        display: unset;
+    }
+}
+
+.bigButton_colour_blue {
+    @include big-button;
+    @include button-style2;
+
+    @media screen and (min-width: 800px) {
+        margin-left: 1em;
+    }
+}
+
+.linkOnline {
+    margin-top: 1.5em;
+    @include link-style1;
+
+    @media screen and (min-width: 800px) {
+        display: none;
+    }
+}

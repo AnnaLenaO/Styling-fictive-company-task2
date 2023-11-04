@@ -1,0 +1,203 @@
+/*------alphabetical-order---------*/
+@mixin area-relocate {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@mixin banner1 {
+    height: 150px;
+    min-width: $spec3-width;
+    background-color: $colour-four;
+    color: $colour-six;
+}
+
+@mixin big-button {
+    height: 70px;
+    width: 295px;
+    font-size: $s-font;
+}
+
+@mixin button-style1 {
+    background-color: $colour-one;
+    color: $colour-six;
+    border: none;
+    border-radius: $s-radius;
+    font-weight: $bold-font;
+}
+
+@mixin button-style2 {
+    background-color: $colour-two;
+    color: $colour-four;
+    border: none;
+    border-radius: $s-radius;
+    font-weight: $bold-font;
+}
+
+@mixin button-style3 {
+    background-color: $colour-four;
+    color: $colour-two;
+    border-style: solid;
+    border-color: $colour-two;
+    border-radius: $s-radius;
+    font-weight: $bold-font;
+}
+
+@mixin card-one {
+    height: fit-content;
+    min-width: $rel1-width;
+    border-radius: $l-radius;
+}
+
+@mixin card-img1 {
+    height: auto;
+    max-width: 100%;
+    border-radius: $mix-radius;
+}
+
+@mixin card-title1 {
+    font-size: $ml-font;
+    font-weight: $normal-font;
+}
+
+@mixin card-text1 {
+    font-size: $xs-font;
+    line-height: $rel2-height;
+}
+
+@mixin feedb-picture {
+    height: 78px;
+    width: auto;
+}
+
+@mixin feedb-text {
+    font-style: italic;
+    font-size: $s-font;
+    line-height: $rel2-height;
+}
+
+@mixin footer1 {
+    padding-top: 2em;
+    padding-bottom: 4em;
+    padding-left: 4vw;
+    height: fit-content;
+    min-width: $spec3-width;
+    background-color: $colour-four;
+    color: $colour-six;
+    font-size: $xs-font;
+}
+
+@mixin footer-title1 {
+    margin-top: 2em;
+    margin-bottom: 0.4em;
+    font-size: 18px;
+}
+
+@mixin hacker {
+    height: auto;
+    max-width: 100%;
+    min-width: $spec3-width;
+}
+
+@mixin heading1 {
+    font-style: normal;
+    font-size: $m-font;
+    line-height: $rel1-height;
+}
+
+@mixin hero {
+    height: auto;
+    max-width: 100%;
+    min-width: $spec3-width;
+}
+
+@mixin link-style1 {
+    color: $colour-three;
+    font-weight: $bold-font;
+}
+
+@mixin link-style2 {
+    color: $colour-six;
+    text-decoration: none;
+    line-height: $rel2-height;
+}
+
+@mixin link-style3 {
+    color: $colour-six;
+    text-decoration: none;
+    font-size: 26px;
+    font-weight: $bold-font;
+}
+
+@mixin list-type1 {
+    list-style: none;
+    padding: 0px;
+}
+
+@mixin list-type2 {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-right: 14%;
+    padding-left: 14%;
+}
+
+@mixin liste-item1 {
+    display: inline-flex;
+    justify-content: space-between;
+    list-style-type: none;
+}
+
+@mixin nav1 {
+    display: block;
+    text-align: center;
+    align-items: center;
+    background-color: $colour-four;
+}
+
+@mixin scroll-cont1 {
+    display: flex;
+    flex-direction: row;
+    overflow-x: scroll;
+    overscroll-behavior-x: contain;
+    scrollbar-width: none;
+}
+
+@mixin section-headline1 {
+    font-size: 32px;
+    font-weight: $normal-font;
+    text-align: center;
+}
+
+@mixin shadow-one {
+    box-shadow: 0 1px 8px 0 $colour-five, 0 4px 8px 0 $colour-five;
+}
+
+@mixin small-button {
+    height: 47px;
+    width: 175px;
+    font-size: 15px;
+}
+
+@mixin star1 {
+    color: $colour-one;
+    font-size: $m-font;
+}
+
+@mixin star2 {
+    height: 15px;
+    width: auto;
+}
+
+@mixin story-font1 {
+    font-size: $ml-font;
+    font-weight: $normal-font;
+}
+
+@mixin story-type1 {
+    height: 500px;
+    min-width: $spec3-width;
+    background-color: $colour-four;
+    color: $colour-six;
+    text-align: center;
+}

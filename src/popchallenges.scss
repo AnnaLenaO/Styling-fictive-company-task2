@@ -1,0 +1,134 @@
+.challengeSection {
+    &__headline {
+        margin: 1.29em;
+        @include section-headline1;
+
+        @media screen and (min-width: 539px) {
+            margin-top: 0.5em;
+        }
+
+        @media screen and (min-width: 650px) {
+            margin-top: 0;
+        }
+    }
+}
+
+.challengeContainer {
+    margin-left: 3vw;
+    @include scroll-cont1;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+
+    @media screen and (min-width: 815px) {
+        margin-left: 4vw;
+    }
+
+    @media screen and (min-width: 893px) {
+        margin-left: 3vw;
+    }
+}
+
+.challengeCard {
+    margin-right: 1vw;
+    margin-bottom: 1.3em;
+    margin-left: 7.2vw;
+    @include card-one;
+    @include shadow-one;
+
+    @media screen and (min-width: 535px) {
+        min-width: $spec1-width;
+        margin-right: 1.9%;
+        margin-left: 1.9%;
+    }
+
+    @media screen and (min-width: 750px) {
+        margin-right: 4%
+    }
+
+    @media screen and (min-width: 765px) {
+        margin-left: 4%;
+    }
+
+    @media screen and (min-width: 800px) {
+        margin-right: 4.5%;
+        margin-left: 4.5%;
+    }
+
+    @media screen and (min-width: 815px) {
+        margin-right: 4%
+    }
+
+    @media screen and (min-width: 820px) {
+        min-width: $spec2-width;
+    }
+
+    @media screen and (min-width: 893px) {
+        margin-right: 1.9%;
+        margin-left: 1.9%;
+        min-width: $spec1-width;
+    }
+
+    &__image {
+        @include card-img1;
+    }
+
+    &__title {
+        margin-top: 0.12em;
+        margin-bottom: 0;
+        margin-left: 4%;
+        @include card-title1;
+    }
+
+    &__text {
+        margin-left: 4%;
+        margin-right: 4%;
+        @include card-text1;
+    }
+}
+
+
+.rating {
+    margin-left: 4%;
+    margin-right: 4%;
+    display: flex;
+    align-items: center;
+    line-height: $spec1-height;
+
+    &__star {
+        margin-right: 0.57vw;
+        @include star1;
+    }
+
+    &__star_first {
+        margin-left: 0;
+    }
+
+    &__star_last {
+        margin-right: 0.75vw;
+        @include star2;
+    }
+
+    &__text {
+        margin-left: 0.5vw;
+        font-size: 14px;
+
+        @media screen and (min-width: 820px) {
+            margin-right: 0;
+            margin-left: auto;
+        }
+    }
+}
+
+.challengeButton {
+    display: flex;
+    justify-content: flex-end;
+
+    &__small {
+        margin-bottom: 3.5%;
+        margin-right: 4%;
+        @include button-style1;
+        @include small-button;
+    }
+}

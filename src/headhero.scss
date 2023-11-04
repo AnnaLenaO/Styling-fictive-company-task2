@@ -1,0 +1,89 @@
+.banner {
+    margin: 0 0 auto;
+    @include banner1;
+
+    &:before {
+        @media screen and (min-width: 800px) {
+            content: "";
+            height: 600px;
+            width: 100%;
+            background-image: url("hacker-one.png");
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: absolute;
+            top: 85px;
+            left: 0px;
+            z-index: -1;
+        }
+    }
+
+    @media screen and (min-width: 1000px) {
+        height: 210px;
+    }
+}
+
+.logo {
+    margin-top: 25px;
+    margin-left: 25px;
+    position: absolute;
+}
+
+.heading {
+    margin-top: 23px;
+    margin-left: 168px;
+    display: inline-block;
+    position: absolute;
+    width: 80px;
+    @include heading1;
+
+    @media screen and (min-width: 1000px) {
+        margin-top: 60px;
+        display: inline;
+        width: initial;
+        max-width: fit-content;
+        font-size: 40px;
+    }
+}
+
+.navBar {
+    display: none;
+
+    @media screen and (min-width: 1000px) {
+        margin-top: 0;
+        padding-top: 8.5em;
+        @include nav1;
+    }
+}
+
+.navList {
+    @media screen and (min-width: 1000px) {
+        @include list-type2;
+    }
+
+    &__item {
+        @media screen and (min-width: 1000px) {
+            @include liste-item1;
+        }
+    }
+
+    &__link {
+        @media screen and (min-width: 1000px) {
+            position: relative;
+            @include link-style3;
+        }
+
+        &:hover {
+            @media screen and (min-width: 1000px) {
+                color: $colour-two;
+            }
+        }
+    }
+}
+
+.hero {
+    @include hero;
+
+    @media screen and (min-width: 800px) {
+        display: none;
+    }
+}

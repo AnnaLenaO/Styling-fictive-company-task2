@@ -1,0 +1,28 @@
+.story {
+    margin: 1.8em 0 auto;
+    @include story-type1;
+    @include story-font1;
+
+    &__text {
+        margin: 0 5vw 50px 5vw;
+        padding-top: 80px;
+        line-height: $rel2-height;
+
+        @media screen and (min-width: 650px) {
+            margin-right: 12%;
+            margin-left: 12%;
+        }
+
+        @media screen and (min-width: 1000px) {
+            margin-right: 27.5%;
+            margin-left: 27.5%;
+            max-width: 45%;
+            padding-top: 130px;
+        }
+    }
+}
+
+.bigButton_colour_dark {
+    @include big-button;
+    @include button-style3;
+}
