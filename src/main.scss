@@ -163,9 +163,37 @@ $rel1-width: 75vw;
     line-height: $rel2-height;
 }
 
+@mixin link-style3 {
+    color: $colour-six;
+    text-decoration: none;
+    font-size: 26px;
+    font-weight: $bold-font;
+}
+
 @mixin list-type1 {
     list-style: none;
     padding: 0px;
+}
+
+@mixin list-type2 {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-right: 14%;
+    padding-left: 14%;
+}
+
+@mixin liste-item1 {
+    display: inline-flex;
+    justify-content: space-between;
+    list-style-type: none;
+}
+
+@mixin nav1 {
+    display: block;
+    text-align: center;
+    align-items: center;
+    background-color: $colour-four;
 }
 
 @mixin scroll-cont1 {
@@ -216,13 +244,6 @@ $rel1-width: 75vw;
 }
 
 
-
-
-
-
-
-
-/*------margin---------*/
 
 
 
@@ -319,10 +340,10 @@ $rel1-width: 75vw;
 .challengeContainer {
     margin-left: 3vw;
     @include scroll-cont1;
-}
 
-.challengeContainer::-webkit-scrollbar {
-    display: none;
+    &::-webkit-scrollbar {
+        display: none;
+    }
 }
 
 .challengeCard {
@@ -341,6 +362,12 @@ $rel1-width: 75vw;
         margin-bottom: 0;
         margin-left: 4%;
         @include card-title1;
+    }
+
+    &__text {
+        margin-left: 4%;
+        margin-right: 4%;
+        @include card-text1;
     }
 }
 
@@ -369,12 +396,6 @@ $rel1-width: 75vw;
         margin-left: 0.5vw;
         font-size: 14px;
     }
-}
-
-.challengeCard__text {
-    margin-left: 4%;
-    margin-right: 4%;
-    @include card-text1;
 }
 
 .challengeButton {
@@ -447,20 +468,22 @@ $rel1-width: 75vw;
 .sideFooter {
     margin: 1.5rem 0 auto;
     @include footer1;
+
+    &__title {
+        @include footer-title1;
+    }
+
+    &__text {
+        margin-top: 0;
+        max-width: 91%;
+        line-height: $rel2-height;
+    }
 }
 
-.escSideFooter__title {
-    @include footer-title1;
-}
-
-.escSideFooter__text {
-    margin-top: 0;
-    max-width: 91%;
-    line-height: $rel2-height;
-}
-
-.mapSideFooter__title {
-    @include footer-title1;
+.mapSideFooter {
+    &__title {
+        @include footer-title1;
+    }
 }
 
 .map {
@@ -480,8 +503,10 @@ $rel1-width: 75vw;
     }
 }
 
-.followSideFooter__title {
-    @include footer-title1;
+.followSideFooter {
+    &__title {
+        @include footer-title1;
+    }
 }
 
 .follow {
@@ -498,67 +523,71 @@ $rel1-width: 75vw;
 
 /*---------------------------------------------------------------------------------*/
 @media screen and (min-width:503px) {
-    .feedback__text {
-        max-width: 460px;
+    .feedback {
+        &__text {
+            max-width: 460px;
+        }
     }
 }
 
 @media screen and (min-width: 535px) {
+
     /*-----popular challenges---------*/
-
-    .challengeCard__text {
-        margin-right: 4%;
-    }
-
     .challengeCard {
         min-width: $spec1-width;
+        margin-right: 1.9%;
         margin-left: 1.9%;
-        margin-right: 1.9%
+
+        &__text {
+            margin-right: 4%;
+        }
     }
 }
 
 @media screen and (min-width:539px) {
 
     /*-----user recommendation-------*/
-    .feedback__text {
-        max-width: 480px;
+    .feedback {
+        &__text {
+            max-width: 480px;
+        }
     }
 
     .recommendation {
-        display: flex;
         margin-top: 3vw;
+        display: flex;
         align-items: center;
         justify-content: center;
     }
 
     /*-----popular challenges---------*/
-    .challengeSection__headline {
-        margin-top: 0.5em;
+    .challengeSection {
+        &__headline {
+            margin-top: 0.5em;
+        }
     }
+
 
     /*-----future grid to be------*/
     .containerSection {
+        margin-right: 5%;
+        margin-left: 5%;
         display: flex;
         flex-direction: column;
         align-items: left;
         justify-content: center;
-        margin-left: 5%;
-        margin-right: 5%;
-    }
+       
+        &__title {
+            margin: 0 0;
+            font-size: $l-font;
+            line-height: $rel1-height;
+        }
 
-    .containerSection__title {
-        font-size: $l-font;
-        margin-top: 0;
-        margin-bottom: 0;
-        margin-left: 0;
-        margin-right: 0;
-        line-height: $rel1-height;
-    }
-
-    .containerSection__text {
-        font-size: $sm-font;
-        margin: 1em 0;
-        line-height: $rel1-height;
+        &__text {
+            margin: 1em 0;
+            font-size: $sm-font;
+            line-height: $rel1-height;
+        }
     }
 
     .bigButton_type_containerSection {
@@ -569,28 +598,34 @@ $rel1-width: 75vw;
 @media screen and (min-width:563px) {
 
     /*-----user recommendation-------*/
-    .feedback__text {
-        max-width: 530px;
+    .feedback {
+        &__text {
+            max-width: 530px;
+        }
     }
 }
 
 @media screen and (min-width:650px) {
 
     /*-----popular challenges---------*/
-    .challengeSection__headline {
-        margin-top: 0;
+    .challengeSection {
+        &__headline {
+            margin-top: 0;
+        }
     }
 
     /*------full story-----*/
-    .story__text {
-        margin-left: 12%;
-        margin-right: 12%;
+    .story {
+        &__text {
+            margin-right: 12%;
+            margin-left: 12%;
+        }
     }
 
     /*-----future grid to be------*/
     .containerSection {
-        margin-left: 12%;
         margin-right: 12%;
+        margin-left: 12%;
     }
 }
 
@@ -618,34 +653,29 @@ $rel1-width: 75vw;
     }
 
     /*------Background-image desktop-- --*/
-    header::before {
+    .header::before {
         content: "";
+        height: 600px;
+        width: 100%;
         background-image: url("hacker-one.png");
         background-repeat: no-repeat;
-        /*background-position: center;*/
-        /*kolla designen om detta ska användas eller ej*/
         background-size: cover;
         position: absolute;
         top: 85px;
         left: 0px;
         z-index: -1;
-        height: 600px;
-        width: 100%;
     }
 
     /*--------button section-------------*/
     .relocateArea {
         flex-direction: row;
         justify-content: center;
-        /* align-items: normal;*/
-
     }
 
     .relocateArea_first {
         margin: 500px 0 0 0;
     }
 
-    /*for desktop version*/
     .relocateArea_second {
         margin-top: 50px;
         margin-bottom: 70px;
@@ -690,9 +720,11 @@ $rel1-width: 75vw;
         min-width: $spec2-width;
     }
 
-    .rating__text {
-        margin-left: auto;
-        margin-right: 0;
+    .rating {
+        &__text {
+            margin-right: 0;
+            margin-left: auto;
+        }
     }
 }
 
@@ -704,9 +736,9 @@ $rel1-width: 75vw;
     }
 
     .challengeCard {
-        min-width: $spec1-width;
         margin-right: 1.9%;
         margin-left: 1.9%;
+        min-width: $spec1-width;
     }
 }
 
@@ -717,20 +749,22 @@ $rel1-width: 75vw;
         display: unset;
     }
 
-    .feedback__picture {
-        margin-right: 2vw;
-        margin-left: 0;
-    }
+    .feedback {
+        &__picture {
+            margin-right: 2vw;
+            margin-left: 0;
+        }
 
-    .feedback__text {
-        max-width: 410px;
-        margin-right: 0;
-    }
+        &__text {
+            margin-right: 0;
+            max-width: 410px;
+        }
 
-    .feedback__note {
-        height: fit-content;
-        width: 450px;
-        margin-top: 0.8em;
+        &__note {
+            margin-top: 0.8em;
+            height: fit-content;
+            width: 450px;
+        }
     }
 }
 
@@ -742,46 +776,34 @@ $rel1-width: 75vw;
 
     .heading {
         display: inline;
+        margin-top: 60px;
         width: initial;
         max-width: fit-content;
-        margin-top: 60px;
         font-size: 40px;
     }
 
     /*-------Navigation bar Desktop------*/
     .navBar {
-        display: block;
-        text-align: center;
-        align-items: center;
         margin-top: 0;
-        background-color: $colour-four;
         padding-top: 8.5em;
+        @include nav1;
     }
 
     .navList {
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        padding-left: 14%;
-        padding-right: 14%;
-    }
+        @include list-type2;
 
-    .navList__item {
-        display: inline-flex;
-        justify-content: space-between;
-        list-style-type: none;
-    }
+        &__item {
+            @include liste-item1;
+        }
 
-    .navList__link {
-        color: $colour-six;
-        text-decoration: none;
-        font-size: 26px;
-        font-weight: $bold-font;
-        position: relative;
-    }
+        &__link {
+            position: relative;
+            @include link-style3;
+        }
 
-    .navList__link:hover {
-        color: $colour-two;
+        &__link:hover {
+            color: $colour-two;
+        }
     }
 
     /*--------button section-------------*/
@@ -790,12 +812,14 @@ $rel1-width: 75vw;
     }
 
     /*-----full story----------------*/
-    .story__text {
-        padding-top: 130px;
-        max-width: 45%;
-        margin-left: 27.5%;
+    .story{
+        &__text {
         margin-right: 27.5%;
+        margin-left: 27.5%;
+        max-width: 45%;
+        padding-top: 130px;
     }
+}
 
     /*-----grid----------------------*/
     .container {
@@ -826,15 +850,15 @@ $rel1-width: 75vw;
     }
 
     .containerSection {
-        align-items: left;
         margin-top: 0;
-        margin-left: 5%;
         margin-right: 5%;
-    }
+        margin-left: 5%;
+        align-items: left;
 
-    .containerSection__text {
-        margin-top: 0.7em;
-        line-height: $rel1-height;
+        &__text {
+            margin-top: 0.7em;
+            line-height: $rel1-height;
+        }
     }
 
     .bigButton_type_containerSection {
@@ -852,26 +876,32 @@ $rel1-width: 75vw;
     .escSideFooter {
         grid-column: 2/6;
         grid-row: 3/6;
+
+        &__title {
+            margin-top: 0;
+        }
+
+        &__text {
+            max-width: 96%;
+        }
     }
 
     .mapSideFooter {
         grid-column: 8/9;
         grid-row: 3/6;
+
+        &__title {
+            margin-top: 0;
+        }
     }
 
     .followSideFooter {
         grid-column: 10/11;
         grid-row: 3/6;
-    }
 
-    .escSideFooter__title,
-    .mapSideFooter__title,
-    .followSideFooter__title {
-        margin-top: 0;
-    }
-
-    .escSideFooter__text {
-        max-width: 96%;
+        &__title {
+            margin-top: 0;
+        }
     }
 
 }
@@ -880,8 +910,8 @@ $rel1-width: 75vw;
 
     /*-----grid-------*/
     .containerSection {
-        margin-left: 8%;
         margin-right: 8%;
+        margin-left: 8%;
     }
 }
 
@@ -889,8 +919,8 @@ $rel1-width: 75vw;
 
     /*-----grid-------*/
     .containerSection {
-        margin-left: 9%;
         margin-right: 9%;
+        margin-left: 9%;
     }
 }
 
@@ -898,8 +928,8 @@ $rel1-width: 75vw;
 
     /*-----grid-------*/
     .containerSection {
-        margin-left: 11%;
         margin-right: 11%;
+        margin-left: 11%;
     }
 }
 
@@ -907,8 +937,8 @@ $rel1-width: 75vw;
 
     /*-----grid-------*/
     .containerSection {
-        margin-left: 13%;
         margin-right: 13%;
+        margin-left: 13%;
     }
 }
 
@@ -916,7 +946,7 @@ $rel1-width: 75vw;
 
     /*-----grid-------*/
     .containerSection {
-        margin-left: 16.8%;
         margin-right: 16.8%;
+        margin-left: 16.8%;
     }
 }
