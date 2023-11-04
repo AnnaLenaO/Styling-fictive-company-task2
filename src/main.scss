@@ -1,31 +1,255 @@
+/*-----variables----------------------------*/
+/*------border-radius--*/
+$s-radius: 4px;
+$l-radius: 7px;
+$mix-radius: 7px 7px 0 0;
+
+/*------colour---------*/
+$colour-one: #E3170A;
+$colour-two: #8ACFE5;
+$colour-three: #36769D;
+$colour-four: #011827;
+$colour-five: #B6BDB5;
+$colour-six: #FFFFFF;
+
+/*------font-family----*/
+$font-one: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+/*------font-size------*/
+$xs-font: 18px;
+$s-font: 23px;
+$sm-font: 24px;
+$m-font: 25px;
+$ml-font: 28px;
+$l-font: 30px;
+
+/*------font-weight----*/
+$normal-font: normal;
+$bold-font: bold;
+
+/*------line-height----*/
+$spec1-height: 18px;
+$rel1-height: 1.1em;
+$rel2-height: 1.2em;
+
+/*------min-width------*/
+$spec1-width: 370px;
+$spec2-width: 400px;
+$spec3-width: 480px;
+$rel1-width: 75vw;
+
+/*------mixin--------------------------------*/
+/*------button---------*/
+@mixin area-relocate {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@mixin banner1 {
+    height: 150px;
+    min-width: $spec3-width;
+    background-color: $colour-four;
+    color: $colour-six;
+}
+
+@mixin big-button {
+    height: 70px;
+    width: 295px;
+    font-size: $s-font;
+}
+
+@mixin button-style1 {
+    background-color: $colour-one;
+    color: $colour-six;
+    border: none;
+    border-radius: $s-radius;
+    font-weight: $bold-font;
+}
+
+@mixin button-style2 {
+    background-color: $colour-two;
+    color: $colour-four;
+    border: none;
+    border-radius: $s-radius;
+    font-weight: $bold-font;
+}
+
+@mixin button-style3 {
+    background-color: $colour-four;
+    color: $colour-two;
+    border-style: solid;
+    border-color: $colour-two;
+    border-radius: $s-radius;
+    font-weight: $bold-font;
+}
+
+@mixin card-one {
+    height: fit-content;
+    min-width: $rel1-width;
+    border-radius: $l-radius;
+}
+
+@mixin card-img1 {
+    height: auto;
+    max-width: 100%;
+    border-radius: $mix-radius;
+}
+
+@mixin card-title1 {
+    font-size: $ml-font;
+    font-weight: $normal-font;
+}
+
+@mixin card-text1 {
+    font-size: $xs-font;
+    line-height: $rel2-height;
+}
+
+@mixin feedb-picture {
+    height: 78px;
+    width: auto;
+}
+
+@mixin feedb-text {
+    font-style: italic;
+    font-size: $s-font;
+    line-height: $rel2-height;
+}
+
+@mixin footer1 {
+    padding-top: 2em;
+    padding-bottom: 4em;
+    padding-left: 4vw;
+    height: fit-content;
+    min-width: $spec3-width;
+    background-color: $colour-four;
+    color: $colour-six;
+    font-size: $xs-font;
+}
+
+@mixin footer-title1 {
+    margin-top: 2em;
+    margin-bottom: 0.4em;
+    font-size: 18px;
+}
+
+@mixin hacker {
+    height: auto;
+    max-width: 100%;
+    min-width: $spec3-width;
+}
+
+@mixin heading1 {
+    font-style: normal;
+    font-size: $m-font;
+    line-height: $rel1-height;
+}
+
+@mixin hero {
+    height: auto;
+    max-width: 100%;
+    min-width: $spec3-width;
+}
+
+@mixin link-style1 {
+    color: $colour-three;
+    font-weight: $bold-font;
+}
+
+@mixin link-style2 {
+    color: $colour-six;
+    text-decoration: none;
+    line-height: $rel2-height;
+}
+
+@mixin list-type1 {
+    list-style: none;
+    padding: 0px;
+}
+
+@mixin scroll-cont1 {
+    display: flex;
+    flex-direction: row;
+    overflow-x: scroll;
+    overscroll-behavior-x: contain;
+    scrollbar-width: none;
+}
+
+@mixin section-headline1 {
+    font-size: 32px;
+    font-weight: $normal-font;
+    text-align: center;
+}
+
+@mixin shadow-one {
+    box-shadow: 0 1px 8px 0 $colour-five, 0 4px 8px 0 $colour-five;
+}
+
+@mixin small-button {
+    height: 47px;
+    width: 175px;
+    font-size: 15px;
+}
+
+@mixin star1 {
+    color: $colour-one;
+    font-size: $m-font;
+}
+
+@mixin star2 {
+    height: 15px;
+    width: auto;
+}
+
+@mixin story-font1 {
+    font-size: $ml-font;
+    font-weight: $normal-font;
+}
+
+@mixin story-type1 {
+    height: 500px;
+    min-width: $spec3-width;
+    background-color: $colour-four;
+    color: $colour-six;
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+/*------margin---------*/
+
+
+
+
 .page {
-   margin: 0;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin: 0;
+    font-family: $font-one;
 }
 
 .banner {
-    height: 150px;
-    min-width: 480px;
     margin: 0 0 auto;
-    background-color: #011827;
-    color: #FFFFFF;
+    @include banner1;
 }
 
 .logo {
-    position: absolute;
-    margin-left: 25px;
     margin-top: 25px;
+    margin-left: 25px;
+    position: absolute;
 }
 
 .heading {
-    display: inline-block;
-    position: absolute;
     margin-top: 23px;
     margin-left: 168px;
-    font-style: normal;
-    font-size: 25px;
-    line-height: 1.1em;
+    display: inline-block;
+    position: absolute;
     width: 80px;
+    @include heading1;
 }
 
 .navBar {
@@ -34,96 +258,67 @@
 
 /*---------------------------------*/
 .hero {
-    max-width: 100%;
-    min-width: 480px;
-    height: auto;
+    @include hero;
 }
 
 .relocateArea {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     margin: 1.7em 5.7vw;
+    @include area-relocate;
 }
 
-.bigButton {
-    height: 70px;
-    width: 295px;
-    font-size: 23px;
-}
-
-/*----button desktop version (display none for mobile version)*/
 .bigButton_colour_red {
     display: none;
-    background-color: #E3170A;
-    color: #FFFFFF;
-    border: none;
-    border-radius: 4px;
-    font-weight: bold;
+    @include big-button;
+    @include button-style1;
 }
 
 .bigButton_colour_blue {
-    background-color: #8ACFE5;
-    color: #011827;
-    border: none;
-    border-radius: 4px;
-    font-weight: bold;
+    @include big-button;
+    @include button-style2;
 }
 
 .linkOnline {
     margin-top: 1.5em;
-    color: #36769D;
-    font-weight: bold;
+    @include link-style1;
 }
 
 /*----lower section:-----*/
-.feedback.feedback_user_two {
-    display: none;
-}
 
 .feedback {
     margin-top: 2.5em;
     display: inline-block;
+
+    &__picture {
+        margin: 0 4vw 102px 4vw;
+        float: inline-start;
+        @include feedb-picture;
+    }
+
+    &__text {
+        margin: 0 7.5vw 0;
+        @include feedb-text;
+    }
+
+    &__note {
+        margin-top: 0.19em;
+        font-size: large;
+    }
 }
 
-.feedback__picture {
-    height: 78px;
-    width: auto;
-    margin-left: 4vw;
-    margin-right: 4vW;
-    margin-bottom: 102px;
-    float: inline-start;
+.feedback_user_two {
+    display: none;
 }
 
-.feedback__text {
-    font-style: italic;
-    font-size: 23px;
-    margin-top: 0;
-    margin-right: 7.5vw;
-    margin-bottom: 0;
-    line-height: 1.2em;
-}
-
-.feedback__note {
-    margin-top: 0.19em;
-    font-size: large;
-}
-
-.challengeSection__headline {
-    font-size: 32px;
-    font-weight: normal;
-    text-align: center;
-    margin-top: 1.29em;
-    margin-bottom: 1.29em;
+.challengeSection {
+    &__headline {
+        margin: 1.29em;
+        @include section-headline1;
+    }
 }
 
 .challengeContainer {
-    display: flex;
-    flex-direction: row;
-    overflow-x: scroll;
-    overscroll-behavior-x: contain;
-    scrollbar-width: none;
     margin-left: 3vw;
+    @include scroll-cont1;
 }
 
 .challengeContainer::-webkit-scrollbar {
@@ -131,110 +326,84 @@
 }
 
 .challengeCard {
-    min-width: 75vW;
-    margin-left: 7.2vw;
     margin-right: 1vw;
-    height: fit-content;
     margin-bottom: 1.3em;
-    border-radius: 7px;
-    box-shadow: 0 1px 8px 0 #B6BDB5, 0 4px 8px 0 #B6BDB5;
-}
+    margin-left: 7.2vw;
+    @include card-one;
+    @include shadow-one;
 
-.challengeCard__image {
-    max-width: 100%;
-    height: auto;
-    border-radius: 7px 7px 0 0;
-}
+    &__image {
+        @include card-img1;
+    }
 
-.challengeCard__title {
-    font-size: 28px;
-    font-weight: normal;
-    margin-top: 0.12em;
-    margin-bottom: 0;
-    margin-left: 4%;
+    &__title {
+        margin-top: 0.12em;
+        margin-bottom: 0;
+        margin-left: 4%;
+        @include card-title1;
+    }
 }
 
 .rating {
-    display: flex;
-    align-items: center;
-    line-height: 18px;
     margin-left: 4%;
     margin-right: 4%;
-}
+    display: flex;
+    align-items: center;
+    line-height: $spec1-height;
 
-.rating__star {
-    color: #E3170A;
-    font-size: 25px;
-    margin-right: 0.57vw;
-}
+    &__star {
+        margin-right: 0.57vw;
+        @include star1;
+    }
 
-.rating__star_first {
-    margin-left: 0;
-}
+    &__star_first {
+        margin-left: 0;
+    }
 
-.rating__star_last {
-    height: 15px;
-    width: auto;
-    margin-right: 0.75vw;
-}
+    &__star_last {
+        margin-right: 0.75vw;
+        @include star2;
+    }
 
-.rating__text {
-    font-size: 14px;
-    margin-left: 0.5vw;
+    &__text {
+        margin-left: 0.5vw;
+        font-size: 14px;
+    }
 }
 
 .challengeCard__text {
     margin-left: 4%;
     margin-right: 4%;
-    font-size: 18px;
-    line-height: 1.2em;
+    @include card-text1;
 }
 
 .challengeButton {
     display: flex;
     justify-content: flex-end;
-}
 
-.challengeButton__small {
-    height: 47px;
-    width: 175px;
-    margin-bottom: 3.5%;
-    margin-right: 4%;
-    font-size: 15px;
-    background-color: #E3170A;
-    color: #FFFFFF;
-    border: none;
-    border-radius: 4px;
-    font-weight: bold;
+    &__small {
+        margin-bottom: 3.5%;
+        margin-right: 4%;
+        @include button-style1;
+        @include small-button;
+    }
 }
 
 .story {
-    height: 500px;
-    min-width: 480px;
     margin: 1.8em 0 auto;
-    background-color: #011827;
-    color: #FFFFFF;
-    text-align: center;
-    font-size: 28px;
-    font-weight: normal;
-}
+    @include story-type1;
+    @include story-font1;
 
-.story__text {
-    margin-left: 5vw;
-    margin-right: 5vw;
-    margin-top: 0;
-    margin-bottom: 50px;
-    padding-top: 80px;
-    line-height: 1.2em;
+    &__text {
+        margin: 0 5vw 50px 5vw;
+        padding-top: 80px;
+        line-height: $rel2-height;
+    }
 }
 
 .bigButton_colour_dark {
-    background-color: #011827;
-    color: #8ACFE5;
-    border-style: solid;
-    border-color: #8ACFE5;
-    border-radius: 4px;
-    font-weight: bold;
+    @include big-button;
+    @include button-style3;
 }
 
 .containerImg {
@@ -242,86 +411,90 @@
     flex-direction: column;
 }
 
-.imgThreeHacker,
+.imgThreeHacker {
+    @include hacker;
+}
+
 .imgTwoHacker {
-    max-width: 100%;
-    min-width: 480px;
-    height: auto;
+    @include hacker;
 }
 
 .containerSection {
     margin-top: 1.57em;
-}
 
-.containerSection__title {
-    font-size: 30px;
-    margin-top: 0;
-    margin-left: 4vw;
-    margin-right: 6vw;
-    line-height: 1.2em;
-}
+    &__title {
+        margin-top: 0;
+        margin-right: 6vw;
+        margin-left: 4vw;
+        font-size: $l-font;
+        line-height: $rel2-height;
+    }
 
-.containerSection__text {
-    font-size: 24px;
-    margin-left: 4vw;
-    margin-right: 4vw;
-    line-height: 1.2em;
+    &__text {
+        margin-left: 4vw;
+        margin-right: 4vw;
+        font-size: $sm-font;
+        line-height: $rel2-height;
+    }
 }
 
 .bigButton_type_containerSection {
-    background-color: #E3170A;
-    color: #FFFFFF;
-    border: none;
-    border-radius: 4px;
-    font-weight: bold;
     margin: 1em auto 3em 4vw;
+    @include big-button;
+    @include button-style1;
 }
 
 .sideFooter {
-    height: fit-content;
-    min-width: 480px;
     margin: 1.5rem 0 auto;
-    padding-left: 4vw;
-    padding-top: 2em;
-    padding-bottom: 4em;
-    background-color: #011827;
-    color: #FFFFFF;
-    font-size: 18px;
+    @include footer1;
 }
 
-.escSideFooter__title,
-.mapSideFooter__title,
-.followSideFooter__title {
-    margin-top: 2em;
-    margin-bottom: 0.4em;
-    font-size: 18px;
+.escSideFooter__title {
+    @include footer-title1;
 }
 
 .escSideFooter__text {
     margin-top: 0;
     max-width: 91%;
-    line-height: 1.2em;
+    line-height: $rel2-height;
 }
 
-.map,
+.mapSideFooter__title {
+    @include footer-title1;
+}
+
+.map {
+    margin-top: 0;
+    margin-left: 0;
+    @include list-type1;
+
+    &__link {
+        display: block;
+        @include link-style2;
+    }
+
+    &__item {
+        &:nth-child(3) {
+            margin-bottom: 1.2em;
+        }
+    }
+}
+
+.followSideFooter__title {
+    @include footer-title1;
+}
+
 .follow {
-    list-style: none;
-    margin-top: 0px;
-    margin-left: 0px;
-    padding: 0px;
+    margin-top: 0;
+    margin-left: 0;
+    @include list-type1;
+
+    &__link {
+        display: block;
+        @include link-style2;
+    }
 }
 
-.map__link,
-.follow__link {
-    display: block;
-    color: #FFFFFF;
-    text-decoration: none;
-    line-height: 1.2em;
-}
-
-.map__item:nth-child(3) {
-    margin-bottom: 1.2em;
-}
 
 /*---------------------------------------------------------------------------------*/
 @media screen and (min-width:503px) {
@@ -338,7 +511,7 @@
     }
 
     .challengeCard {
-        min-width: 370px;
+        min-width: $spec1-width;
         margin-left: 1.9%;
         margin-right: 1.9%
     }
@@ -374,18 +547,18 @@
     }
 
     .containerSection__title {
-        font-size: 30px;
+        font-size: $l-font;
         margin-top: 0;
         margin-bottom: 0;
         margin-left: 0;
         margin-right: 0;
-        line-height: 1.1em;
+        line-height: $rel1-height;
     }
 
     .containerSection__text {
-        font-size: 24px;
+        font-size: $sm-font;
         margin: 1em 0;
-        line-height: 1.1em;
+        line-height: $rel1-height;
     }
 
     .bigButton_type_containerSection {
@@ -465,10 +638,10 @@
         flex-direction: row;
         justify-content: center;
         /* align-items: normal;*/
-        
+
     }
 
-    .relocateArea_first{
+    .relocateArea_first {
         margin: 500px 0 0 0;
     }
 
@@ -480,11 +653,6 @@
 
     .bigButton_colour_red {
         display: unset;
-        background-color: #E3170A;
-        color: #FFFFFF;
-        border: none;
-        border-radius: 4px;
-        font-weight: bold;
     }
 
     .bigButton_colour_blue {
@@ -519,7 +687,7 @@
 
     /*-------pupular challenges------*/
     .challengeCard {
-        min-width: 400px;
+        min-width: $spec2-width;
     }
 
     .rating__text {
@@ -536,7 +704,7 @@
     }
 
     .challengeCard {
-        min-width: 370px;
+        min-width: $spec1-width;
         margin-right: 1.9%;
         margin-left: 1.9%;
     }
@@ -586,7 +754,7 @@
         text-align: center;
         align-items: center;
         margin-top: 0;
-        background-color: #011827;
+        background-color: $colour-four;
         padding-top: 8.5em;
     }
 
@@ -605,15 +773,15 @@
     }
 
     .navList__link {
-        color: #FFFFFF;
+        color: $colour-six;
         text-decoration: none;
         font-size: 26px;
-        font-weight: bold;
+        font-weight: $bold-font;
         position: relative;
     }
 
     .navList__link:hover {
-        color: #8ACFE5;
+        color: $colour-two;
     }
 
     /*--------button section-------------*/
@@ -666,7 +834,7 @@
 
     .containerSection__text {
         margin-top: 0.7em;
-        line-height: 1.1em;
+        line-height: $rel1-height;
     }
 
     .bigButton_type_containerSection {
@@ -708,7 +876,8 @@
 
 }
 
-@media screen and (min-width: 1052px){
+@media screen and (min-width: 1052px) {
+
     /*-----grid-------*/
     .containerSection {
         margin-left: 8%;
@@ -716,7 +885,8 @@
     }
 }
 
-@media screen and (min-width: 1066px){
+@media screen and (min-width: 1066px) {
+
     /*-----grid-------*/
     .containerSection {
         margin-left: 9%;
@@ -724,14 +894,17 @@
     }
 }
 
-@media screen and (min-width: 1100px){
+@media screen and (min-width: 1100px) {
+
     /*-----grid-------*/
     .containerSection {
         margin-left: 11%;
         margin-right: 11%;
     }
 }
-@media screen and (min-width: 1174px){
+
+@media screen and (min-width: 1174px) {
+
     /*-----grid-------*/
     .containerSection {
         margin-left: 13%;
@@ -739,7 +912,8 @@
     }
 }
 
-@media screen and (min-width: 1245px){
+@media screen and (min-width: 1245px) {
+
     /*-----grid-------*/
     .containerSection {
         margin-left: 16.8%;
