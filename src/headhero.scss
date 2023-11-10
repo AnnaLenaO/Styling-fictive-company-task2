@@ -2,6 +2,23 @@
     margin: 0 0 auto;
     @include banner1;
 
+    &__dropDown {
+        position: absolute;
+        top: 25px;
+        right: 25px;
+
+        @media screen and (min-width: 1000px) {
+            display: none;
+        }
+    }
+
+    &__fadeBackgrd {
+        //opacity and style for initial JS fade in
+        opacity: 0;
+        display: none;
+        @include backgrd-fade;
+    }
+
     &:before {
         @media screen and (min-width: 800px) {
             content: "";
@@ -48,34 +65,59 @@
 .navBar {
     display: none;
 
+    //opacity and style for initial JS fade in
+    opacity: 0;
+    @include nav1-dropdown;
+
     @media screen and (min-width: 1000px) {
+        opacity: 1;
         margin-top: 0;
         padding-top: 8.5em;
         @include nav1;
     }
+
+    &__exit {
+        //opacity and style for initial JS fade in
+        opacity: 0;
+        position: absolute;
+        top: 25px;
+        right: 25px;
+
+        @media screen and (min-width: 1000px) {
+            display: none;
+        }
+    }
 }
 
 .navList {
+    //for style already when dropDown
+    @include list-typedropdown;
+
     @media screen and (min-width: 1000px) {
         @include list-type2;
     }
 
     &__item {
+        //for style already when dropDown
+        @include list-itemdropdown;
+
         @media screen and (min-width: 1000px) {
-            @include liste-item1;
+            @include list-item1;
         }
     }
 
     &__link {
+
+        //for style and hover alreday when dropDown
+        @include link-styledropdown;
+
+        &:hover {
+            color: $colour-two;
+        }
+
         @media screen and (min-width: 1000px) {
             position: relative;
             @include link-style3;
-        }
-
-        &:hover {
-            @media screen and (min-width: 1000px) {
-                color: $colour-two;
-            }
         }
     }
 }

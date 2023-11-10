@@ -1,10 +1,10 @@
-/*------alphabetical-order---------*/
-/*------border-radius--*/
+//------alphabetical-order---------
+//------border-radius--
+$mix-radius: 7px 7px 0 0;
 $s-radius: 4px;
 $l-radius: 7px;
-$mix-radius: 7px 7px 0 0;
 
-/*------colour---------*/
+//------colour---------
 $colour-one: #E3170A;
 $colour-two: #8ACFE5;
 $colour-three: #36769D;
@@ -12,10 +12,10 @@ $colour-four: #011827;
 $colour-five: #B6BDB5;
 $colour-six: #FFFFFF;
 
-/*------font-family----*/
+//------font-family----
 $font-one: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 
-/*------font-size------*/
+//------font-size------
 $xs-font: 18px;
 $s-font: 23px;
 $sm-font: 24px;
@@ -23,17 +23,17 @@ $m-font: 25px;
 $ml-font: 28px;
 $l-font: 30px;
 
-/*------font-weight----*/
-$normal-font: normal;
+//------font-weight----
 $bold-font: bold;
+$normal-font: normal;
 
-/*------line-height----*/
-$spec1-height: 18px;
+//------line-height----
 $rel1-height: 1.1em;
 $rel2-height: 1.2em;
+$spec1-height: 18px;
 
-/*------min-width------*/
+//------min-width------
+$rel1-width: 75vw;
 $spec1-width: 370px;
 $spec2-width: 400px;
 $spec3-width: 480px;
-$rel1-width: 75vw;

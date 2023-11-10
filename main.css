@@ -1,12 +1,3 @@
-/*------alphabetical-order---------*/
-/*------border-radius--*/
-/*------colour---------*/
-/*------font-family----*/
-/*------font-size------*/
-/*------font-weight----*/
-/*------line-height----*/
-/*------min-width------*/
-/*------alphabetical-order---------*/
 .page {
   margin: 0;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
@@ -18,6 +9,24 @@
   min-width: 480px;
   background-color: #011827;
   color: #FFFFFF;
+}
+.banner__dropDown {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+}
+@media screen and (min-width: 1000px) {
+  .banner__dropDown {
+    display: none;
+  }
+}
+.banner__fadeBackgrd {
+  opacity: 0;
+  display: none;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  background-color: #FFFFFF;
 }
 @media screen and (min-width: 800px) {
   .banner:before {
@@ -67,33 +76,88 @@
 
 .navBar {
   display: none;
+  opacity: 0;
+  position: fixed;
+  height: 94vh;
+  width: 91vw;
+  border-radius: 2px;
+  top: 25px;
+  left: 50%;
+  transform: translateX(-50%);
+  align-items: center;
+  justify-content: center;
+  background-color: #011827;
 }
 @media screen and (min-width: 1000px) {
   .navBar {
+    opacity: 1;
     margin-top: 0;
     padding-top: 8.5em;
     display: block;
     text-align: center;
     align-items: center;
     background-color: #011827;
+    position: initial;
+    height: initial;
+    width: initial;
+    top: initial;
+    left: initial;
+    transform: none;
+    border-radius: none;
+    z-index: initial;
+  }
+}
+.navBar__exit {
+  opacity: 0;
+  position: absolute;
+  top: 25px;
+  right: 25px;
+}
+@media screen and (min-width: 1000px) {
+  .navBar__exit {
+    display: none;
   }
 }
 
+.navList {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
 @media screen and (min-width: 1000px) {
   .navList {
+    height: initial;
     display: flex;
+    flex-direction: row;
     justify-content: space-around;
     align-items: center;
     padding-right: 14%;
     padding-left: 14%;
   }
 }
+.navList__item {
+  list-style-type: none;
+  padding: 30px;
+}
 @media screen and (min-width: 1000px) {
   .navList__item {
     display: inline-flex;
     justify-content: space-between;
     list-style-type: none;
+    padding: initial;
   }
+}
+.navList__link {
+  color: #FFFFFF;
+  text-decoration: none;
+  font-size: 30px;
+  font-weight: bold;
+}
+.navList__link:hover {
+  color: #8ACFE5;
 }
 @media screen and (min-width: 1000px) {
   .navList__link {
@@ -102,11 +166,6 @@
     text-decoration: none;
     font-size: 26px;
     font-weight: bold;
-  }
-}
-@media screen and (min-width: 1000px) {
-  .navList__link:hover {
-    color: #8ACFE5;
   }
 }
 

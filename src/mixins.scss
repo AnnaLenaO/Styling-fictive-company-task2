@@ -1,8 +1,15 @@
-/*------alphabetical-order---------*/
+//------alphabetical-order---------
 @mixin area-relocate {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+@mixin backgrd-fade {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background-color: $colour-six;
 }
 
 @mixin banner1 {
@@ -43,26 +50,26 @@
     font-weight: $bold-font;
 }
 
-@mixin card-one {
-    height: fit-content;
-    min-width: $rel1-width;
-    border-radius: $l-radius;
-}
-
 @mixin card-img1 {
     height: auto;
     max-width: 100%;
     border-radius: $mix-radius;
 }
 
-@mixin card-title1 {
-    font-size: $ml-font;
-    font-weight: $normal-font;
+@mixin card-one {
+    height: fit-content;
+    min-width: $rel1-width;
+    border-radius: $l-radius;
 }
 
 @mixin card-text1 {
     font-size: $xs-font;
     line-height: $rel2-height;
+}
+
+@mixin card-title1 {
+    font-size: $ml-font;
+    font-weight: $normal-font;
 }
 
 @mixin feedb-picture {
@@ -129,29 +136,75 @@
     font-weight: $bold-font;
 }
 
+@mixin link-styledropdown {
+    color: $colour-six;
+    text-decoration: none;
+    font-size: 30px;
+    font-weight: $bold-font;
+}
+
+@mixin list-item1 {
+    display: inline-flex;
+    justify-content: space-between;
+    list-style-type: none;
+    padding: initial;
+}
+
+@mixin list-itemdropdown {
+    list-style-type: none;
+    padding: 30px;
+}
+
 @mixin list-type1 {
     list-style: none;
     padding: 0px;
 }
 
 @mixin list-type2 {
+    height: initial;
     display: flex;
+    flex-direction: row;
     justify-content: space-around;
     align-items: center;
     padding-right: 14%;
     padding-left: 14%;
 }
 
-@mixin liste-item1 {
-    display: inline-flex;
-    justify-content: space-between;
-    list-style-type: none;
+@mixin list-typedropdown {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
 }
 
 @mixin nav1 {
     display: block;
     text-align: center;
     align-items: center;
+    background-color: $colour-four;
+    //beacause of dropdowm: 
+    position: initial;
+    height: initial;
+    width: initial;
+    top: initial;
+    left: initial;
+    transform: none;
+    border-radius: none;
+    z-index: initial;
+}
+
+@mixin nav1-dropdown {
+    position: fixed;
+    height: 94vh;
+    width: 91vw;
+    border-radius: 2px;
+    top: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+    align-items: center;
+    justify-content: center;
     background-color: $colour-four;
 }
 
